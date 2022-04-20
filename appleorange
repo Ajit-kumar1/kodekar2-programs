@@ -1,0 +1,24 @@
+#include<stdio.h>
+void main()
+{
+	int s,t,a,b,m,n,apple=0,orange=0;
+	scanf("%d%d",&s,&t);
+	scanf("%d%d",&a,&b);
+	scanf("%d%d",&m,&n);
+	int arr[m],ar[n],i,j;
+	for(i=0;i<m;i++)
+	scanf("%d",&arr[i]);
+	for(j=0;j<n;j++)
+	scanf("%d",&ar[j]);
+	for(i=0;i<m;i++)
+	{
+		if(arr[i]+a>=s && arr[i]+a<=t)
+		apple++;
+	}
+	for(j=0;j<n;j++)
+	{
+		if(ar[j]+b>=s && ar[j]+b<=t)
+		orange++;
+	}
+	printf("%d %d",apple,orange);
+}
