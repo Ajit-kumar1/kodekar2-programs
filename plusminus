@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+//    printf("enter the range");
+    scanf("%d",&n);
+    int arr[n],i;
+    float a=0,c=0,b=0,d=0;
+//    printf("enter the elements");
+    for(i=0;i<n;i++)
+    scanf("%d",&arr[i]);
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]>0)
+        {
+            a++;
+        }
+        else if(arr[i]<0)
+        {
+            b++;
+        }
+        else
+        c++;
+    }
+    a=a/n;
+    b=b/n;
+    c=c/n;
+    printf("%.6f\n%.6f\n%.6f",a,b,c);
+    return 0;
+}
