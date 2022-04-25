@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,j,a=0,b=0;
+//    printf("Enter the range");
+    scanf("%d",&n);
+    int arr[n][n];
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(i==j)
+                a=a+arr[i][j];
+            if((i+j)==(n-1))
+            b=b+arr[i][j];
+        }
+    }
+    if(a>b)
+    printf("%d",a-b);
+    else
+        printf("%d",b-a);
+    return 0;
+}
