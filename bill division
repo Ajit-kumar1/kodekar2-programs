@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+
+
+public class Solution {
+    public static void main(String[] args) 
+    {
+        Scanner s = new Scanner(System.in);
+        int n,k,b,i,sum=0,sum1=0;
+        n = s.nextInt();
+        k= s.nextInt();
+        int[] bill = new int[n];
+        for(i=0;i<n;i++)
+        {
+            bill[i]= s.nextInt();
+        }
+        b=s.nextInt();
+        for(i=0;i<n;i++)
+        {
+            if(i!=k)
+                sum=bill[i]+sum;
+            else
+                continue;
+        }
+        sum=sum/2;
+        if(b>sum)
+        {
+            sum1=b-sum;
+            System.out.println(sum1);
+        }
+        else
+            System.out.println("Bon Appetit");
+    }
+    }
