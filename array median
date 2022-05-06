@@ -1,0 +1,39 @@
+#include<stdio.h>
+void main()
+{
+	int n,m,a,temp=0;
+  
+    scanf("%d%d",&n,&m);
+    a=n+m;
+    int arr[n],arr1[m],i,j,ar[20];
+    for(i=0;i<n;i++)
+    {
+    scanf("%d",&arr[i]);
+    ar[i]=arr[i];
+	}
+	int k=n;
+	printf("The second array:");
+    for(j=0;j<m;j++)
+    {
+    scanf("%d",&arr1[j]);
+    ar[k]=arr1[j];
+    k++;
+	}
+	for(i=0;i<a;i++)
+	{
+		for(j=i+1;j<a;j++)
+		{
+			if(ar[i]>ar[j])
+			{
+				temp=ar[i];
+			ar[i]=ar[j];
+			ar[j]=temp;
+			}
+		}
+	}
+for(i=0;i<a;i++)
+printf(" %d ",ar[i]); 
+i=(a+1)/2;
+printf("%d",ar[i]);          
+      
+}
