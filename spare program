@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    int num,digit=1,rem,rev=0;
+    int arr[10],i,j,count,flag=0;
+    scanf("%d",&num);
+    while(num>0)
+    {
+        rem=num%2;
+        rev=(digit*rem)+rev;
+        num=num/2;
+        digit*=10;
+    }
+    num=rev;
+    count=0;
+    while(rev>0)
+    { rev=rev/10;
+     count++;
+     }
+    rem=0;
+    rev=num;
+    
+    for(i=0;i<count;i++)
+    {
+        rem=num%10;
+        arr[i]=rem;
+        num=num/10;
+    }
+    for(i=0;i<count;i++)
+    {
+        for(j=i+1;j<count;j++)
+        {
+            if(arr[i]==arr[j])
+                flag=1;
+        }
+    }
+    if(flag==0)
+    printf("1");
+    else
+        printf("0");
+    return 0;
+}
